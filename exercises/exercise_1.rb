@@ -24,4 +24,4 @@ Store.create(
   womens_apparel: false
 )
 
-p Store.count()
+puts Store.count()

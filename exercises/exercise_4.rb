@@ -19,19 +19,13 @@ Store.create(
   mens_apparel: true,
   womens_apparel: false
 )
-Store.create(
-  name: "Yaletown",
-  annual_revenue: 430_000,
-  mens_apparel: true,
-  womens_apparel: true
-)
 
-@mens_stores = Store.where(mens_apparel: true, womens_apparel: false)
-@mens_stores.each { |store| p store.name }
-@womens_stores =
-  Store.where(
-    mens_apparel: false,
-    womens_apparel: true,
-    annual_revenue: ...1_000_000
-  )
-@womens_stores.each { |store| p store.name }
+@mens_stores = Store.where(mens_apparel: true)
+for item in @mens_stores
+  p item.name
+  p item.annual_revenue
+end
+@womens_stores = Store.where(womens_apparel: true, annual_revenue: 1_000_000..)
+for item in @womens_stores
+  p item.name
+end

@@ -13,6 +13,7 @@ puts "----------"
 p "enter a store name"
 print "> "
 @user_input = gets.chomp
-@new_store = Store.create(name: @user_input)
+@new_store =
+  Store.create(name: @user_input, annual_revenue: 100, mens_apparel: true)
 p @new_store.valid?
 p @new_store.errors.full_messages

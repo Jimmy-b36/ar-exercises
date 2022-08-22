@@ -9,8 +9,8 @@ puts "Exercise 6"
 puts "----------"
 
 # Your code goes here ...
-@store1.employees.create(first_name: "John", last_name: "Doe", hourly_rate: 50)
-@store1.employees.create(first_name: "Sin", last_name: "Bad", hourly_rate: 125)
+@store1.employees.create(first_name: "John", last_name: "Doe", hourly_rate: 5)
+@store1.employees.create(first_name: "Sin", last_name: "Bad", hourly_rate: 12)
 @store1.employees.create(
   first_name: "Glados",
   last_name: "Rob",
@@ -32,3 +32,5 @@ puts "----------"
   last_name: "Potter",
   hourly_rate: 85
 )
+
+p @store2.employees.count()

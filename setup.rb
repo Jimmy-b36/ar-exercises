@@ -34,8 +34,10 @@ ActiveRecord::Schema.define do
     t.column :womens_apparel, :boolean
     t.timestamps null: false
   end
+
   create_table :employees do |table|
     table.references :store
+    table.column :password, :string
     table.column :first_name, :string
     table.column :last_name, :string
     table.column :hourly_rate, :integer
